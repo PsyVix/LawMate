@@ -1,0 +1,223 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="icon" href="L4.png" type="image/x-icon">
+     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="Basic.css">
+<script src="RWU.js"></script>
+    <title>Welcome to LawMate – Your Trusted Legal Connection</title>
+    <style>
+        img {
+            height: 100px;
+            width: 120px;
+            border-radius: 3px;
+        }
+     #di, #dj {
+    width: 1000px;
+    height:1100px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display:grid;
+    background-color:#fff;
+}
+#di_email,
+#dj_email 
+{
+    text-transform: lowercase;
+}
+input[type="submit"]
+{
+    width:74%;
+    height:70%;
+    padding: 12px;
+    background-color: #04AA6D;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+ transition-duration: 0.2s;
+  cursor: pointer;
+
+}
+
+input[type="submit"]:hover
+{
+
+ margin:15px;
+ height:70%;
+ border-radius:0px;
+ outline:none;
+ border:0px;
+ border-width:0px;
+ background-color:transparent; 
+border: 2px solid #04AA6D; 
+  color: #04AA6D;
+  width:75%;
+}
+
+input
+{
+width: 100%;
+height:70%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    text-align:center;
+     transition-duration: 0.1s;
+}
+input:focus
+{
+outline:none;
+border:2px solid #aaa;
+}
+}
+::placeholder
+{
+  font-size:21px;
+   color:grey;
+   text-align:center;
+   font-weight:bold;
+   text-transform: capitalize;
+}
+h2
+{
+   padding:30px;
+   margin:-20px;
+   text-align:center;
+   color:white;
+   background-color:darkblue;
+   }
+   
+
+.foot
+{
+   text-align:center;
+   margin-top:-10px;
+  }
+  
+  .togglebutton
+  {
+   margin:15px;
+   padding:15px;
+   width:25%;
+   background-color:#eee;
+   border-width:0px;
+   font-size:21px;
+   border:0px solid darkblue;
+   opacity:0.8;
+   border-radius:15px;
+   transition-duration: 0.2s
+   }
+ .togglebutton:hover
+  {
+   padding:15px;
+   width:27%;
+   color:black;
+   background-color:#fefefe;
+   border-width:0px;
+   font-size:25px;
+   opacity:1;
+   border:2px solid black;
+   }
+        
+    </style>
+</head>
+<body>
+    <!-- Start of Header and Navigation -->
+    <center>
+        <header>
+            <a href="Abtus.html">
+                <img src="L4.png" alt="LawMate Logo" style="margin-left:530px;height:139px;width:159px;margin-right:499px;">
+            </a>
+        </header>
+        <nav>
+            <a href="home.html">Home</a> 
+            <a href="Abtus.html">About Us</a>
+            <a href="News.html">News</a>
+            <a href="faq.html">FAQ</a>
+        </nav>
+    </center>
+    
+    <div class="container">
+    <form action="reg.php" method="post" data-form="di">
+        <div id="di">
+            <h2>Lawyer Registration Form</h2>
+            <hr style="margin-top: -29px; border-radius: 99px; width: 99px; height: 4px; background-color: #aaaaff; border-color: #aaaaff;">
+            <p class="foot">
+                <button id="ditoggle" class="togglebutton">Customer</button>
+                <a href="login.html"><button class="togglebutton">Login</button></a>
+                <a href="Disc.html"><button class="togglebutton">Disclaimer</button></a>
+            </p>
+            <input type="text" id="di_name" name="di_name" placeholder="Enter Your Name">
+            <input type="email" id="di_email" name="di_email" placeholder="Enter Your Email">
+            <input type="password" id="di_password" name="di_password" placeholder="Enter Your Password">
+            <input type="password" id="di_confirm-password" name="di_confirm-password" placeholder="Confirm Password">
+            <input type="tel" id="di_phone" name="di_phone" placeholder="Enter Your Mobile Number">
+            <input type="text" id="di_bar-number" name="di_bar-number" placeholder="Unique Bar Number">
+            <input type="text" id="di_location" name="di_location" placeholder="Location of Practice">
+            <input type="text" id="di_parea" name="di_parea" placeholder="Practice Domian">
+            <center>   
+                <input type="submit" name="di_submit" value="Register" id="di_submit">
+            </center>  
+        </div>
+    </form>
+    <form action="reg.php" method="post">
+        <div id="dj" style="display: none;">
+            <h2>Customer Registration Form</h2>
+            <hr style="margin-top: -49px; border-radius: 99px; width: 99px; height: 4px; background-color: #aaaaff; border-color: #aaaaff;">
+            <p class="foot">
+                <button id="djtoggleButton" class="togglebutton">Lawyer</button>
+                <a href="login.html"><button class="togglebutton">Login</button></a>
+                <a href="Disc.html"><button class="togglebutton">Disclaimer</button></a>
+            </p>
+            <input type="text" id="dj_name" name="dj_name" placeholder="Enter Your Name">
+            <input type="email" id="dj_email" name="dj_email" placeholder="Enter Your Email">
+            <input type="password" id="dj_password" name="dj_password" placeholder="Enter Your Password"> 
+            <input type="password" id="dj_confirm-password" name="dj_confirm-password" placeholder="Confirm Password">
+            <input type="tel" id="dj_mobile-number" name="dj_mobile-number" placeholder="Enter Your Mobile Number">
+            <input type="text" id="dj_address" name="dj_address" placeholder="Enter Your City">
+            <center>   
+                <input type="submit" name="dj_submit" value="Register" id="dj_submit">
+            </center>
+        </div>
+        </div>
+    </form>
+
+    
+
+    
+    
+    
+    
+<nav id="bottom" style="margin-top:30px;">
+<div class="bottom"><div>
+    <img src="L4.png" style="margin-right:689px;height:125px;width:155px;">
+    </div>
+    <div class="bot">
+        <p><a href="home.html">Home</a></p>
+        <p><a href="Abtus.html">About Us</a></p>
+         <p><a href="RWU.html">Register with us</a></p>
+    </div>
+     <div class="bot">
+        <p><a href="News.html">News</a></p>
+        <p><a href="Disc.html">Disclaimer</a></p>
+                <p><a href="Cont.html">Contact Us</a></p>
+    </div>
+    </div>
+</nav>
+<footer>
+    &copy; 2024 Law Business. All rights reserved.
+</footer>
+</body>
+</html>
+

@@ -1,0 +1,7 @@
+{
+    "name": "pirtacodex/project",
+    "description": "Description [My awesome project]: My awesome project",
+    "require": {
+        "phpmailer/phpmailer": "^6.0"
+    }
+}

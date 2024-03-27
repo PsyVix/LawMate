@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to LawMate – Your Trusted Legal Connection</title>
+    <link rel="icon" href="L4.png" type="image/x-icon">
+     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="Basic.css">
+   <style>
+        p
+        {
+           color:#000000;
+            text-align:center;
+        }
+        img {
+            height: 100px;
+            width: 120px;
+            border-radius: 3px;
+        }
+ 
+        hr {
+            border: 1px solid #005b96; /* Darker hr color to match navbar */
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        u {
+            text-decoration:underline dotted skyblue;  
+            }
+            
+          
+         .di{
+           
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4), 0px 7px 13px -3px rgba(0, 0, 0, 0.3), inset 0px -3px 0px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+           display:grid;
+           padding:20px;
+        }
+        input
+        { 
+       box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+       outline:0px;
+       border:1px solid navy;
+       border-inline:3px solid navy;
+       border-bottom:3px solid navy;
+       max-width:100%;
+       margin:9px;
+       padding:20px;
+       border-radius:10px;
+        }
+    button
+    {
+       padding:15px;
+        border:3px solid navy;
+        width:50%;
+        margin:25px  120px;
+        border-right:1px solid navy;
+        border-top:1px solid navy;
+        background-color:#efefef;
+        color:navy;
+        font-size:20px;
+        border-radius:10px;
+      }
+         button:hover
+    {
+        border:2px solid navy;
+        width:52%;
+        border-left:1px solid navy;
+        border-bottom:1px solid navy;
+      }
+      .di a 
+      {
+        text-decoration: none;
+         color: black;
+          border-width: 2px; 
+          padding-right: 10px;
+          font-size:17px;
+     }
+      .check
+      {
+         font-size:25px;
+         margin-top:-5px;
+        }
+      .radio
+      {
+         box-shadow:0 0;
+     }      
+ 
+    </style>
+</head>
+<body>
+                                                      <!--  ~~~~~~~Start of Header and Navigation~~~~~~~~~~~~~~~ -->
+                                                      
+<center>                                                      
+<header>
+<a href="Abtus.html"><img src="L4.png" alt="LawMate Logo"  style="margin-left:530px;height:139px;width:159px;margin-right:499px;"></a>
+</header>
+    <nav>
+        <a href="home.html">Home</a> 
+        <a href="Abtus.html">About Us</a>
+        <a href="News.html">News</a>
+        <a href="faq.html">FAQ</a>
+    </nav>
+ </center>   
+    
+<form id="loginForm" action="login.php" method="post">
+                                                          <!--  ~~~~~~~Start of Main Body~~~~~~~~~~~~~~~ -->
+<center>
+    <p style="background-color: darkblue; height: 100px; margin-top: 399px; margin-bottom: -499px;"></p>
+    <div class="di" style="height: 515px; width: 519px; background-color: #fefefe; border-radius: 5px; margin: 199px;">
+        <br>
+        <legend style="font-size:30px; padding: 19px; margin-top:-50px;">Account Login</legend>
+        <hr style="margin-top: -29px; border-radius: 99px; width: 99px; height: 4px; background-color: #aaaaff; border-color: #aaaaff">
+        <form method="post">
+            <div class="check">
+                <input type="radio" value="customer" name="choice" class="radio">Parties
+                <input type="radio" value="lawyer" name="choice" class="radio">Lawyer
+            </div>
+            <input type="text" name="username" id="username" placeholder="Username" >
+            <input type="password" name="password" id="password" placeholder="Password">
+    <button id="loginButton">LOGIN</button>
+        </form>
+        <div class="r">
+        <a href="RWU.html">Registered with us </a>
+            </div></div>
+</center>
+
+
+<nav id="bottom" style="margin-top:30px;">
+<div class="bottom"><div>
+    <img src="L4.png" style="margin-right:689px;height:125px;width:155px;">
+    </div>
+    <div class="bot">
+        <p><a href="home.html">Home</a></p>
+        <p><a href="Abtus.html">About Us</a></p>
+         <p><a href="RWU.html">Register with us</a></p>
+    </div>
+     <div class="bot">
+        <p><a href="News.html">News</a></p>
+        <p><a href="Disc.html">Disclaimer</a></p>
+                <p><a href="Cont.html">Contact Us</a></p>
+    </div>
+    </div>
+</nav>
+<footer>
+    &copy; 2024 Law Business. All rights reserved.
+</footer>
+<script>
+    $(document).ready(function() {
+        $("#loginButton").click(function() {
+            var username = $("#username").val().trim();
+            var password = $("#password").val().trim();
+            var choice = $('input[name="choice"]:checked').val();
+            
+            if (!choice) {
+                alert("Please select user type (Parties/Lawyer).");
+                return false;
+            }
+            
+            if (username === "" || password === "") {
+                alert("Please fill in all fields.");
+                return false;
+            }
+            
+            // If all checks pass, you can submit the form
+            $("#loginForm").submit();
+        });
+    });
+</script>
+</body>
+</html>
+

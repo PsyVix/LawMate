@@ -1,0 +1,65 @@
+$(document).ready(function(){
+
+
+    $("#ditoggle").click(function(){
+        $("#dj").show();
+        $("#di").hide();
+    });
+    
+    $("#djtoggleButton").click(function(){
+        $("#di").show();
+        $("#dj").hide();
+    });
+
+    // Rest of your code for form validation and submission...
+
+    // Function to validate email address format
+    function validateEmail(email) {
+        var re = /\S+@\S+\.\S+/;
+        return re.test(email);
+    }
+
+    // Function to validate password match
+    function validatePasswordMatch(password, confirmPassword) {
+        return password === confirmPassword;
+    }
+
+    // Function to perform form validation
+    function validateForm(formId) {
+        var name = $("#" + formId + "_name").val();
+        var email = $("#" + formId + "_email").val();
+        var password = $("#" + formId + "_password").val();
+        var confirmPassword = $("#" + formId + "_confirm-password").val();
+
+        if (name.trim() === "" || email.trim() === "" || password.trim() === "" || confirmPassword.trim() === "") {
+            alert("Please fill in all fields.");
+            return false;
+        } else if (!validateEmail(email)) {
+            alert("Please enter a valid email address.");
+            return false;
+        } else if (!validatePasswordMatch(password, confirmPassword)) {
+            alert("Passwords do not match.");
+            return false;
+        }
+
+        return true;
+    }
+
+    // Event handler for form submission
+    $("#di_submit").click(function(){
+        if (validateForm("di")) {
+            // Perform further actions if form is valid
+            // For example, submit form data to server
+            alert("Lawyer registration form submitted successfully.");
+        }
+    });
+
+    $("#dj_submit").click(function(){
+        if (validateForm("dj")) {
+            // Perform further actions if form is valid
+            // For example, submit form data to server
+            alert("Customer registration form submitted successfully.");
+        }
+    });
+});
+
